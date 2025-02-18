@@ -1,12 +1,24 @@
-import express from 'express';
-import { registerUser, loginUser } from './auth.controller.js';
+import { Router } from 'express';
+import { login, register } from './auth.controller.js';
+import { registerValidator, loginValidator } from '../middlewares/validator.js';
+import { uploadProfilePicture } from '../middlewares/multer-upload.js';
+import { deleteFileOnError } from '../middlewares/delete-file-on-error.js';
 
-const router = express.Router();
+const router = Router();
 
-// Ruta para registro de usuario
-router.post('/register', registerUser);
+router.post(
+    '/login',
+    loginValidator,
+    deleteFileOnError,
+    login
+);
 
-// Ruta para login de usuario
-router.post('/login', loginUser);
+router.post(
+    '/register',
+    uploadProfilePicture.single('profilePicture'),
+    registerValidator,
+    deleteFileOnError,
+    register
+);
 
 export default router;

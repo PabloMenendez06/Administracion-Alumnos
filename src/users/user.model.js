@@ -5,12 +5,12 @@ const UserSchema = new Schema(
         name: {
             type: String,
             required: [true, "Name is required"],
-            maxLength: [30, "Cannot exceed 30 characters"]
+            maxLength: [25, "Cannot exceed 25 characters"]
         },
         surname: {
             type: String,
             required: [true, "Surname is required"],
-            maxLength: [30, "Cannot exceed 30 characters"]
+            maxLength: [25, "Cannot exceed 25 characters"]
         },
         username: {
             type: String,
@@ -36,7 +36,7 @@ const UserSchema = new Schema(
             maxLength: 8,
             required: true,
         },
-        rol: {
+        role: {
             type: String,
             required: true,
             enum: ["TEACHER_ROLE", "STUDENT_ROLE"],
@@ -44,13 +44,7 @@ const UserSchema = new Schema(
         courses: [{
             type: Schema.Types.ObjectId,
             ref: "Course",
-            validate: {
-                validator: function (v) {
-                    return this.role === "STUDENT_ROLE" ? v.length <= 3 : true;
-                },
-                message: "Students can only be assigned to a maximum of 3 courses"
-            }
-        }],
+        }],        
         status: {
             type: Boolean,
             default: true,

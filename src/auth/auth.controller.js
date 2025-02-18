@@ -1,75 +1,88 @@
-import bcrypt from 'bcryptjs';
-import User from '../users/user.model.js';
+import Usuario from '../users/user.model.js';
+import { hash, verify } from 'argon2';
 import { generarJWT } from '../helpers/generate-jwt.js';
 
-// Registro de usuario
-export const registerUser = async (req, res) => {
-    const { name, surname, username, email, password, phone, rol } = req.body;
+export const login = async (req, res) => {
+    const { email, password, username } = req.body;
 
     try {
-        // Verificar si el correo ya está registrado
-        const existingUser = await User.findOne({ email });
-        if (existingUser) {
-            return res.status(400).json({ message: 'El correo ya está registrado' });
+        const lowerEmail = email ? email.toLowerCase() : null;
+        const lowerUsername = username ? username.toLowerCase() : null;
+
+        const user = await Usuario.findOne({
+            $or: [{ email: lowerEmail }, { username: lowerUsername }]
+        });
+
+        if (!user) {
+            return res.status(400).json({
+                msg: 'Credenciales incorrectas, el correo o nombre de usuario no existe en la base de datos'
+            });
         }
 
-        // Encriptar la contraseña
-        const salt = bcrypt.genSaltSync(10);
-        const hashedPassword = bcrypt.hashSync(password, salt);
+        if (!user.status) {
+            return res.status(400).json({
+                msg: 'El usuario está inactivo'
+            });
+        }
 
-        // Crear nuevo usuario
-        const newUser = new User({
-            name,
-            surname,
-            username,
-            email,
-            password: hashedPassword,
-            phone,
-            rol,
+        const validPassword = await verify(user.password, password);
+        if (!validPassword) {
+            return res.status(400).json({
+                msg: 'La contraseña es incorrecta'
+            });
+        }
+
+        const token = await generarJWT(user.id);
+
+        return res.status(200).json({
+            msg: 'Inicio de sesión exitoso!',
+            userDetails: {
+                username: user.username,
+                token: token,
+                profilePicture: user.profilePicture
+            }
         });
 
-        // Guardar el usuario
-        await newUser.save();
-
-        // Generar el JWT
-        const token = await generarJWT(newUser._id);
-
-        // Responder con el token y los datos del usuario
-        res.status(201).json({
-            user: newUser,
-            token
+    } catch (e) {
+        console.log(e);
+        return res.status(500).json({
+            message: "Error en el servidor",
+            error: e.message
         });
-    } catch (error) {
-        res.status(500).json({ message: 'Error al registrar el usuario', error });
     }
 };
 
-// Login de usuario
-export const loginUser = async (req, res) => {
-    const { email, password } = req.body;
-
+export const register = async (req, res) => {
     try {
-        // Verificar si el usuario existe
-        const user = await User.findOne({ email });
-        if (!user) {
-            return res.status(400).json({ message: 'Credenciales incorrectas' });
-        }
+        const data = req.body;
+        let profilePicture = req.file ? req.file.filename : null;
 
-        // Verificar si la contraseña es correcta
-        const isPasswordValid = bcrypt.compareSync(password, user.password);
-        if (!isPasswordValid) {
-            return res.status(400).json({ message: 'Credenciales incorrectas' });
-        }
+        const encryptedPassword = await hash(data.password);
 
-        // Generar JWT
-        const token = await generarJWT(user._id);
-
-        // Responder con el token
-        res.status(200).json({
-            user,
-            token
+        const user = await Usuario.create({
+            name: data.name,
+            surname: data.surname,
+            username: data.username,
+            email: data.email,
+            phone: data.phone,
+            password: encryptedPassword,
+            role: data.role,
+            profilePicture
         });
+
+        return res.status(201).json({
+            message: "Usuario registrado exitosamente",
+            userDetails: {
+                user: user.email,
+                profilePicture: user.profilePicture,
+            }
+        });
+
     } catch (error) {
-        res.status(500).json({ message: 'Error al iniciar sesión', error });
+        console.log(error);
+        return res.status(500).json({
+            message: "Error al registrar el usuario",
+            error: error.message
+        });
     }
 };
