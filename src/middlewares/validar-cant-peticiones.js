@@ -9,4 +9,4 @@ const limiter = rateLimit({
     }
 });
 
-export default limiter
+export default limiter;
