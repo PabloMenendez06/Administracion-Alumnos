@@ -1,0 +1,84 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "users",
+    "collectionId": "b573775b-0a93-446d-a387-5d7a6a6b4bde",
+    "dateExported": "2025-02-18T00:51:40.491Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e1d5bb22-6777-4292-a921-48b83f6386c6",
+            "colId": "b573775b-0a93-446d-a387-5d7a6a6b4bde",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/auth/register",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-18T00:07:29.432Z",
+            "modified": "2025-02-18T00:16:15.203Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"mayen\",\n  \"surname\": \"mayen\",\n  \"username\": \"mayen\",\n  \"email\": \"mayen@gmail.com\",\n  \"phone\": \"12345678\",\n  \"password\": \"12345678\",\n  \"role\": \"TEACHER_ROLE\"\n}\n ",
+                "form": []
+            }
+        },
+        {
+            "_id": "4ee3b749-7f0a-4cf1-9fa3-ee097fc5580a",
+            "colId": "b573775b-0a93-446d-a387-5d7a6a6b4bde",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/auth/login",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-18T00:07:33.097Z",
+            "modified": "2025-02-18T00:51:29.199Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"mayen@gmail.com\",\n  \"password\": \"12345678\"\n\n}\n ",
+                "form": []
+            }
+        },
+        {
+            "_id": "b212b798-7273-48c6-b253-72611586d7bd",
+            "colId": "b573775b-0a93-446d-a387-5d7a6a6b4bde",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/users",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/users/67b3c4bc7b6622d16c208949",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-02-18T00:07:38.020Z",
+            "modified": "2025-02-18T00:30:39.036Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzYmJjMjdiNjYyMmQxNmMyMDg5M2MiLCJpYXQiOjE3Mzk4Mzg1NzYsImV4cCI6MTczOTg0MjE3Nn0.hO5m6ZNh9IcugK9BwQ4jLy8Zx8A7Bxqg06BEP_XBdGY"
+                }
+            ]
+        },
+        {
+            "_id": "705f4796-f086-4e4b-b663-1d6b357c4b8d",
+            "colId": "b573775b-0a93-446d-a387-5d7a6a6b4bde",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/users/67b3c39e7b6622d16c208940",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/users/67b3c39e7b6622d16c208940",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-02-18T00:38:21.042Z",
+            "modified": "2025-02-18T00:38:21.042Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzYmJjMjdiNjYyMmQxNmMyMDg5M2MiLCJpYXQiOjE3Mzk4Mzg5OTAsImV4cCI6MTczOTg0MjU5MH0.EjOOG0Gm7_JEbRPaC4x7FBKjIU4Q-aRjXWLf0ZHjVl4"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"Elmer\",\r\n  \"surname\": \"Elmer\",\r\n  \"username\": \"ElmerSantos\",\r\n  \"email\": \"Esantos@gmail.com\",\r\n  \"phone\": \"12345678\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"TEACHER_ROLE\"\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "gY-fw3EOkqnUsDBInpGKET9CBXUF36YCYtNTLgMlQOO7OrOFJprDwsyRFgXSiwb8FzLsu-cNn2hO0qTY0IWgog"
+}
