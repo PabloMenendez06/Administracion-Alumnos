@@ -1,0 +1,153 @@
+[{
+  "_id": {
+    "$oid": "67b3bbc27b6622d16c20893c"
+  },
+  "name": "Ceferino",
+  "surname": "Rodriguez",
+  "username": "crodriguez",
+  "email": "crodriguez@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$23fOsBGJS/VW6rYBYQvX2A$pcaiDPBJ+PpsLEq1OdwEfhWsBuy1zuX3arEJh5AJMLc",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "TEACHER_ROLE",
+  "courses": [],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T22:44:18.217Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T22:44:18.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3c39e7b6622d16c208940"
+  },
+  "name": "Pablo",
+  "surname": "Menendez",
+  "username": "pmenendez",
+  "email": "pmenendez@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$QcVjMLTIWaiPCTNWJpVmuA$WuYodWOnSwtdHc4D1asjBoKoBdFsmEVjsylmMp4pEG4",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "STUDENT_ROLE",
+  "courses": [
+    {
+      "$oid": "67b3cc94dafedf2b08c570de"
+    },
+    {
+      "$oid": "67b3d1b6dafedf2b08c570f5"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T23:17:50.898Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T00:17:58.271Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3c3ad7b6622d16c208944"
+  },
+  "name": "Pablo2",
+  "surname": "Menendez2",
+  "username": "pmenendez2",
+  "email": "pmenendezz@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$jfSyMuAxBIiDrrN+eu2Iig$TqY9sYB0d160rYzgh2y3syJmWpTg0AeCRVamvGpa8Qw",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "STUDENT_ROLE",
+  "courses": [
+    {
+      "$oid": "67b3cc94dafedf2b08c570de"
+    },
+    {
+      "$oid": "67b3d10fdafedf2b08c570eb"
+    },
+    {
+      "$oid": "67b3d1b6dafedf2b08c570f5"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T23:18:05.597Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T00:17:58.271Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3c4bc7b6622d16c208949"
+  },
+  "name": "rodrigo",
+  "surname": "palma",
+  "username": "palma",
+  "email": "palma@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$WhSQtCXRRPLjSxf47KW6hQ$YTwCeY7KRtHkpZqRCl8K05xAAfrx8qxk1Bvbil4FyIo",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "STUDENT_ROLE",
+  "courses": [
+    {
+      "$oid": "67b3cc94dafedf2b08c570de"
+    },
+    {
+      "$oid": "67b3d10fdafedf2b08c570eb"
+    },
+    {
+      "$oid": "67b3d1b6dafedf2b08c570f5"
+    }
+  ],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T23:22:36.582Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T00:18:20.350Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3cc65dafedf2b08c570d9"
+  },
+  "name": "hola",
+  "surname": "hola",
+  "username": "hola",
+  "email": "hola@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$l4nuKDIu+ZOk96GmEUjwpw$otav+3mjjgJZP5EAr08uftEXHnNSFQRyA+vPgCceyZA",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "STUDENT_ROLE",
+  "courses": [],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T23:55:17.401Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T23:55:17.401Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3d14fdafedf2b08c570f0"
+  },
+  "name": "mayen",
+  "surname": "mayen",
+  "username": "mayen",
+  "email": "mayen@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$XCSPp6L5Cl66X+h5+39B3A$20xo0j78y3BoaMRyzxX2VPC9X4+8usgWbl0AIgzhV6o",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "TEACHER_ROLE",
+  "courses": [],
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-18T00:16:15.182Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T00:16:15.182Z"
+  }
+}]

@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "67b3cc94dafedf2b08c570de"
+  },
+  "title": "Curso de Matematica",
+  "description": "Curso de matematicas impartido por Ceferino Rodriguez",
+  "teacher": {
+    "$oid": "67b3bbc27b6622d16c20893c"
+  },
+  "students": [
+    {
+      "$oid": "67b3c39e7b6622d16c208940"
+    },
+    {
+      "$oid": "67b3c3ad7b6622d16c208944"
+    },
+    {
+      "$oid": "67b3c4bc7b6622d16c208949"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-17T23:56:04.066Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T23:56:04.066Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3d10fdafedf2b08c570eb"
+  },
+  "title": "Curso de Fisica",
+  "description": "Curso de Fisica impartido por Ceferino Rodriguez",
+  "teacher": {
+    "$oid": "67b3bbc27b6622d16c20893c"
+  },
+  "students": [
+    {
+      "$oid": "67b3c3ad7b6622d16c208944"
+    },
+    {
+      "$oid": "67b3c4bc7b6622d16c208949"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-18T00:15:11.755Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T00:15:11.755Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b3d1b6dafedf2b08c570f5"
+  },
+  "title": "Curso de Lenguaje",
+  "description": "Curso de Lenguaje impartido por Mayen",
+  "teacher": {
+    "$oid": "67b3d14fdafedf2b08c570f0"
+  },
+  "students": [
+    {
+      "$oid": "67b3c39e7b6622d16c208940"
+    },
+    {
+      "$oid": "67b3c3ad7b6622d16c208944"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-18T00:17:58.268Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T00:17:58.268Z"
+  }
+}]

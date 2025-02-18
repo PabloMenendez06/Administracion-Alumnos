@@ -1,0 +1,106 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "cursos",
+    "collectionId": "11592d00-7309-465b-bdbb-c43b602d4703",
+    "dateExported": "2025-02-18T00:51:58.828Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "abf4a092-64b8-47b5-b16b-76a31b318f05",
+            "colId": "11592d00-7309-465b-bdbb-c43b602d4703",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/auth/register",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/course",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-18T00:10:21.233Z",
+            "modified": "2025-02-18T00:17:58.285Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzZDE0ZmRhZmVkZjJiMDhjNTcwZjAiLCJpYXQiOjE3Mzk4Mzc4NDAsImV4cCI6MTczOTg0MTQ0MH0.mtuT5SSr7Bc6hBp6Laoy2IBIB7Rc6H397xBxMPfKJF4"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Curso de Lenguaje\",\n  \"description\": \"Curso de Lenguaje impartido por Mayen\",\n  \"teacher\": \"67b3d14fdafedf2b08c570f0\",\n  \"students\": [\n    \"67b3c39e7b6622d16c208940\",\n    \"67b3c3ad7b6622d16c208944\"\n  ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a776366c-42ad-49ce-a7ea-f8857d85d534",
+            "colId": "11592d00-7309-465b-bdbb-c43b602d4703",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/users/67b3c4bc7b6622d16c208949/courses",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/users/67b3c4bc7b6622d16c208949/courses",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-18T00:21:38.430Z",
+            "modified": "2025-02-18T00:21:38.430Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzYzRiYzdiNjYyMmQxNmMyMDg5NDkiLCJpYXQiOjE3Mzk4Mzc2NDEsImV4cCI6MTczOTg0MTI0MX0.lOOLZUpc1_fqueqcF3UyR_JGhtIREUWlnFKq9mcCfeo"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"courseId\": \"67b3d1b6dafedf2b08c570f5\"\r\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1ef8290c-a9a4-4dbb-af84-3d1ee2f1efa6",
+            "colId": "11592d00-7309-465b-bdbb-c43b602d4703",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/course/67b3d10fdafedf2b08c570eb",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/course/67b3d10fdafedf2b08c570eb",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-02-18T00:44:49.590Z",
+            "modified": "2025-02-18T00:44:49.590Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzYmJjMjdiNjYyMmQxNmMyMDg5M2MiLCJpYXQiOjE3Mzk4MzkzMzYsImV4cCI6MTczOTg0MjkzNn0.s0iyW7K27Rf-5Zjd0zn2irFv2F4uKJLPwFI110TfdcQ"
+                }
+            ]
+        },
+        {
+            "_id": "9316bf68-84f9-4477-90b0-2dfe01b0be17",
+            "colId": "11592d00-7309-465b-bdbb-c43b602d4703",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/course",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/course",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-02-18T00:46:20.311Z",
+            "modified": "2025-02-18T00:46:20.311Z",
+            "headers": []
+        },
+        {
+            "_id": "2553684d-b37f-48da-95dd-1e0852569f37",
+            "colId": "11592d00-7309-465b-bdbb-c43b602d4703",
+            "containerId": "",
+            "name": "http://localhost:3001/Admin-Alumnos/v1/course",
+            "url": "http://localhost:3001/Admin-Alumnos/v1/course/67b3d1b6dafedf2b08c570f5",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-18T00:50:38.561Z",
+            "modified": "2025-02-18T00:50:38.561Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzYmJjMjdiNjYyMmQxNmMyMDg5M2MiLCJpYXQiOjE3Mzk4MzkzMzYsImV4cCI6MTczOTg0MjkzNn0.s0iyW7K27Rf-5Zjd0zn2irFv2F4uKJLPwFI110TfdcQ"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"title\": \"Curso de reposteria\",\r\n  \"description\": \"Este curso es de reposteria\",\r\n  \"teacher\": \"67b3d1b6dafedf2b08c570f5\",\r\n  \"students\": [\r\n    \"67b3c3ad7b6622d16c208944\",\r\n    \"67b3cc65dafedf2b08c570d9\"\r\n  ]\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "Mf-oaU8aqU1ImDExw8WNFUGxX9cx5gRRHpArgdON5xpejsvdPa_pvMdtWdCLhcARb6wliQohELgbiOXgdf5Ynw"
+}
